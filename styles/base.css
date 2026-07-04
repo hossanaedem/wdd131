@@ -1,0 +1,129 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Merriweather:wght@400;700&display=swap');
+
+/* Root Variables (easy color control) */
+:root {
+    --primary-color: #1f3a5f;
+    --secondary-color: #f4f4f4;
+    --accent-color: #ffb703;
+    --text-color: #222;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* HEADER */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Make span behave like a block (required) */
+header span {
+    display: block;
+    font-family: 'Merriweather', serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+/* NAVIGATION (Flexbox) */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Nav Links */
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+nav a:hover {
+    background-color: var(--accent-color);
+    color: black;
+}
+
+/* MAIN CONTAINER */
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+/* Main Title */
+main h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: 'Merriweather', serif;
+}
+
+/* GRID layout for cards */
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+/* Card Styling */
+.card {
+    background: white;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Card Headings */
+.card h2 {
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+/* Images */
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 0.5rem 0;
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* Responsive Grid (optional improvement) */
+@media (min-width: 700px) {
+    main {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    main h1 {
+        grid-column: 1 / -1;
+    }
+}
