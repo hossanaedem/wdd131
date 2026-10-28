@@ -1,28 +1,29 @@
+/* Reset default browser spacing */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+/* Main color scheme */
 :root {
-    --primary-color: #2C3E50;
-    --accent-color: #3498DB;
-    --bg-color: #F5F6FA;
-    --text-color: #2F3640;
+    --primary-color: #16324F;
+    --background-color: #F4F6F8;
+    --white-color: #FFFFFF;
 }
 
+/* General page styling */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #FFFFFF;
-    color: #333333;
-    margin: 0;
-    padding: 0;
+    font-family: "Roboto", sans-serif;
+    background-color: var(--background-color);
+    color: var(--primary-color);
     line-height: 1.6;
 }
 
+/* Header */
 header {
-    background-color: #1B365D;
-    color: #FFFFFF;
+    background-color: var(--primary-color);
+    color: var(--white-color);
     text-align: center;
     padding: 1rem;
 }
@@ -30,17 +31,7 @@ header {
 header h1 {
     font-size: 1.2rem;
     font-weight: normal;
-    letter-spacing: 0.5px;
     margin-bottom: 10px;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 5px 20px;
 }
 
 #course-title {
@@ -50,42 +41,56 @@ nav ul {
     margin-bottom: 0.75rem;
 }
 
+/* Navigation */
 nav {
     display: flex;
-    justify-content: center;
-    gap: 1.5rem;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
     flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 nav a {
-    color: #FFFFFF;
+    color: var(--white-color);
     text-decoration: none;
     padding: 0.5rem 1rem;
-    transition: background-color 0.3s ease, color 0.3s ease;
     border-radius: 4px;
+    transition: background-color 0.3s ease;
 }
 
-nav a:hover {
-    background-color: var(--accent-color);
-    color: #FFFFFF;
+nav a:hover,
+nav a:focus-visible {
+    background-color: #294D70;
 }
 
+/* Main content */
 main {
     max-width: 1050px;
     margin: 2rem auto;
     padding: 0 1rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
     gap: 1.5rem;
+}
+
+/* Main heading */
+h1 {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
 }
 
 .profile-title {
     text-align: center;
     font-size: 2.2rem;
-    color: #222222;
+    color: var(--primary-color);
     margin: 30px 0;
 }
 
+/* Content layout */
 .content-grid {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -93,29 +98,25 @@ main {
     align-items: start;
 }
 
-@media (max-width: 768px) {
-    .content-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-h1 {
-    grid-column: 1 / -1;
-    text-align: center;
-    color: #1B365D;
-}
-
+/* Cards */
 .card {
-    background-color: #FFFFFF;
+    background-color: var(--white-color);
+    color: var(--primary-color);
     border-radius: 8px;
     min-height: 400px;
     padding: 1.5rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 4px rgba(22, 50, 79, 0.15);
 }
 
+.card h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Card heading */
 .card-header {
-    background-color: #1B365D;
-    color: #FFFFFF;
+    background-color: var(--primary-color);
+    color: var(--white-color);
     text-align: center;
     padding: 10px;
     font-weight: bold;
@@ -126,12 +127,23 @@ h1 {
     padding: 25px;
 }
 
+/* Images */
 .card img {
+    display: block;
     max-width: 100%;
     height: auto;
     border-radius: 4px;
+    margin-bottom: 1rem;
 }
 
+.profile-img {
+    width: 130px;
+    height: 160px;
+    object-fit: cover;
+    border: 1px solid var(--background-color);
+}
+
+/* About section */
 .bio-block {
     display: flex;
     gap: 20px;
@@ -143,17 +155,27 @@ h1 {
     font-size: 0.95rem;
 }
 
-.profile-img {
-    width: 130px;
-    height: 160px;
-    object-fit: cover;
-    border: 1px solid #CCCCCC;
-}
-
+/* Footer */
 footer {
-    background-color: #1B365D;
-    color: #FFFFFF;
+    background-color: var(--primary-color);
+    color: var(--white-color);
     text-align: center;
     padding: 1.5rem;
     margin-top: 2rem;
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        gap: 0.5rem;
+    }
+
+    .bio-block {
+        flex-direction: column;
+        align-items: center;
+    }
 }
