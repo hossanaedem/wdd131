@@ -5,15 +5,15 @@
 }
 
 :root {
-    --primary-color: #2c3e50;
-    --accent-color: #3498db;
-    --bg-color: #f5f6fa;
-    --text-color: #2f3640;
+    --primary-color: #2C3E50;
+    --accent-color: #3498DB;
+    --bg-color: #F5F6FA;
+    --text-color: #2F3640;
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #ffffff;
+    background-color: #FFFFFF;
     color: #333333;
     margin: 0;
     padding: 0;
@@ -21,8 +21,8 @@ body {
 }
 
 header {
-    background-color: #1b365d;
-    color: #fff;
+    background-color: #1B365D;
+    color: #FFFFFF;
     text-align: center;
     padding: 1rem;
 }
@@ -58,7 +58,7 @@ nav {
 }
 
 nav a {
-    color: #fff;
+    color: #FFFFFF;
     text-decoration: none;
     padding: 0.5rem 1rem;
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -67,7 +67,7 @@ nav a {
 
 nav a:hover {
     background-color: var(--accent-color);
-    color: #fff;
+    color: #FFFFFF;
 }
 
 main {
@@ -102,11 +102,11 @@ main {
 h1 {
     grid-column: 1 / -1;
     text-align: center;
-    color: #1b365d;
+    color: #1B365D;
 }
 
 .card {
-    background-color: #ffffff;
+    background-color: #FFFFFF;
     border-radius: 8px;
     min-height: 400px;
     padding: 1.5rem;
@@ -114,8 +114,8 @@ h1 {
 }
 
 .card-header {
-    background-color: #1b365d;
-    color: #ffffff;
+    background-color: #1B365D;
+    color: #FFFFFF;
     text-align: center;
     padding: 10px;
     font-weight: bold;
@@ -147,12 +147,12 @@ h1 {
     width: 130px;
     height: 160px;
     object-fit: cover;
-    border: 1px solid #cccccc;
+    border: 1px solid #CCCCCC;
 }
 
 footer {
-    background-color: #1b365d;
-    color: #fff;
+    background-color: #1B365D;
+    color: #FFFFFF;
     text-align: center;
     padding: 1.5rem;
     margin-top: 2rem;
