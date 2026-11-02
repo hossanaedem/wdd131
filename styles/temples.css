@@ -11,16 +11,15 @@
     --secondary-color: #294D70;
     --background-color: #F4F6F8;
     --white-color: #FFFFFF;
+    --text-color: #222222;
 }
 
 /* Body */
 body {
     font-family: "Roboto", sans-serif;
     background-color: var(--background-color);
-    color: #222222;
+    color: var(--text-color);
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
     width: 100%;
 }
 
@@ -44,7 +43,7 @@ header h2 {
     display: block;
     background: none;
     border: none;
-    color: white;
+    color: var(--white-color);
     font-size: 2rem;
     cursor: pointer;
     padding: 0.3rem;
@@ -100,7 +99,7 @@ h1 {
     gap: 1.5rem;
 }
 
-/* Figure */
+/* Figures */
 figure {
     background-color: var(--white-color);
     padding: 1rem;
@@ -109,9 +108,6 @@ figure {
     text-align: center;
     width: 100%;
     margin: 0;
-}
-
-figure {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -120,19 +116,18 @@ figure:hover {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Temple Images */
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 figure img {
     width: 100%;
     height: 220px;
     object-fit: cover;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Image hover effect */
 figure img:hover {
     transform: scale(1.08);
     filter: brightness(1.1);
