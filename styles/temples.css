@@ -12,6 +12,9 @@
     --background-color: #F4F6F8;
     --white-color: #FFFFFF;
     --text-color: #222222;
+    --border-color: rgba(255, 255, 255, 0.2);
+    --shadow-color: rgba(0, 0, 0, 0.15);
+    --shadow-hover: rgba(0, 0, 0, 0.2);
 }
 
 /* Body */
@@ -67,7 +70,7 @@ nav a {
     text-decoration: none;
     padding: 0.8rem;
     font-size: 1rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 1px solid var(--border-color);
 }
 
 nav a:hover,
@@ -113,7 +116,7 @@ figure {
 
 figure:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 15px var(--shadow-hover);
 }
 
 /* Images */
