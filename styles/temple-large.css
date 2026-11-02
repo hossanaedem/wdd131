@@ -1,0 +1,55 @@
+/* Larger Screen Layout */
+@media screen and (min-width: 38rem) {
+
+    /* Header */
+    header {
+        padding: 1rem 5%;
+    }
+
+    /* Hide Hamburger Button */
+    #menu-button {
+        display: none;
+    }
+
+    /* Navigation */
+    nav {
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        margin-top: 0;
+    }
+
+    nav a {
+        border: none;
+        padding: 0.6rem 1rem;
+    }
+
+    /* Main */
+    main {
+        padding: 2rem;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    /* Three Column Grid */
+    .temple-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    figure img {
+        height: 200px;
+    }
+
+}
+
+/* Extra Large Screens */
+@media screen and (min-width: 70rem) {
+
+    .temple-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
