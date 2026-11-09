@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Akwa Ibom State, Nigeria, its people, culture, food, and weather.">
+    <meta name="author" content="Hossana Edem Okon">
+
+    <title>Akwa Ibom, Nigeria | Place</title>
+
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <h1>Akwa Ibom, Nigeria</h1>
+    </header>
+
+    <main>
+
+        <div class="hero">
+            <picture>
+                <source srcset="images/hero-large.webp" media="(min-width: 1000px)">
+
+                <source srcset="images/hero-medium.webp" media="(min-width: 500px)">
+
+                <img src="images/hero-small.webp" alt="Beautiful tropical view inspired by Akwa Ibom State" width="1500"
+                    height="750">
+            </picture>
+        </div>
+
+        <div class="content-grid">
+
+            <section class="card about">
+                <h2>About Akwa Ibom</h2>
+
+                <p>
+                    Akwa Ibom is a beautiful coastal state in the southern
+                    part of Nigeria. Its capital city is Uyo. The state is
+                    known for its welcoming people, rich culture, green
+                    landscapes, rivers, and coastline.
+                </p>
+
+                <p>
+                    The people of Akwa Ibom include Ibibio, Annang, and
+                    Oron communities. Their traditions can be seen in
+                    local music, festivals, crafts, and food. Popular
+                    dishes include afang soup, edikaikong soup, and
+                    ekpang nkukwo.
+                </p>
+
+                <h3>Quick Facts</h3>
+
+                <ul class="facts">
+                    <li><strong>Capital:</strong> Uyo</li>
+                    <li><strong>Country:</strong> Nigeria</li>
+                    <li><strong>Region:</strong> South-South Nigeria</li>
+                    <li><strong>Known for:</strong> Culture, seafood, and hospitality</li>
+                </ul>
+            </section>
+
+            <section class="card weather">
+                <h2>Weather</h2>
+
+                <img class="weather-icon" src="images/weather.svg" alt="Partly cloudy weather icon">
+
+                <div class="weather-details">
+
+                    <p><strong>Condition:</strong> Partly cloudy</p>
+
+                    <p>
+                        <strong>Temperature:</strong>
+                        <span id="temperature">29</span> °C
+                    </p>
+
+                    <p>
+                        <strong>Wind Speed:</strong>
+                        <span id="wind-speed">12</span> km/h
+                    </p>
+
+                    <p>
+                        <strong>Wind Chill:</strong>
+                        <span id="wind-chill">N/A</span>
+                    </p>
+
+                </div>
+            </section>
+
+        </div>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>
+            &copy; <span id="current-year"></span>
+            | Hossana Edem Okon | Akwa Ibom, Nigeria
+        </p>
+
+        <p>
+            Last modified: <span id="last-modified"></span>
+        </p>
+    </footer>
+
+</body>
+
+</html>

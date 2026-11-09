@@ -1,0 +1,167 @@
+/* Global CSS variables */
+:root {
+    --green: #087443;
+    --deep-green: #064b2c;
+    --gold: #f2c14e;
+    --cream: #fffaf0;
+    --text: #202820;
+    --white: #ffffff;
+    --border: #d9e2d8;
+}
+
+/* General reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background-color: var(--cream);
+}
+
+/* Header */
+.site-header {
+    background-color: var(--green);
+    color: var(--white);
+    text-align: center;
+    padding: 0.5rem;
+    border-bottom: 6px solid var(--gold);
+}
+
+.site-header h1 {
+    font-size: clamp(1rem, 3vw, 2rem);
+}
+
+/* Main content */
+main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Hero image */
+.hero {
+    width: 100%;
+    overflow: hidden;
+    background-color: #dce9dc;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Content layout */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+/* Information cards */
+.card {
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.25rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Section headings */
+.card h2 {
+    color: var(--deep-green);
+    text-align: center;
+    border-bottom: 2px solid var(--gold);
+    padding-bottom: 0.4rem;
+    margin-bottom: 1rem;
+}
+
+/* Smaller headings */
+.card h3 {
+    color: var(--deep-green);
+    margin: 1rem 0 0.4rem;
+}
+
+/* Paragraphs */
+.card p {
+    margin-bottom: 0.8rem;
+}
+
+/* Quick facts list */
+.facts {
+    padding-left: 1.25rem;
+}
+
+/* Weather section */
+.weather {
+    text-align: center;
+}
+
+.weather-icon {
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: 0.5rem auto 1rem;
+}
+
+.weather-details {
+    text-align: left;
+    display: inline-block;
+}
+
+/* Footer */
+.site-footer {
+    background-color: var(--deep-green);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem;
+    border-top: 5px solid var(--gold);
+    font-size: 0.9rem;
+}
+
+/* Larger screens */
+@media screen and (min-width: 700px) {
+
+    .content-grid {
+        grid-template-columns: 1.4fr 1fr;
+        align-items: start;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+
+    .card {
+        padding: 1.5rem;
+    }
+
+    /* Weather icon beside heading on wide screens */
+    .weather h2::after {
+        content: " ⛅";
+        font-size: 1.5rem;
+        margin-left: 0.5rem;
+    }
+
+    /* Hide SVG on wide screens */
+    .weather-icon {
+        display: none;
+    }
+}
+
+/* Desktop screens */
+@media screen and (min-width: 1000px) {
+
+    .hero img {
+        max-height: 560px;
+        object-fit: cover;
+    }
+
+    .content-grid {
+        grid-template-columns: 1.5fr 1fr;
+    }
+}
