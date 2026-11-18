@@ -1,11 +1,16 @@
-/* Desktop Layout */
+/* ==============================
+   DESKTOP LAYOUT
+   Screens 768px and above
+================================= */
+
 @media screen and (min-width: 768px) {
 
-    /* Header */
+    /* Hide Hamburger Button */
     #menu-button {
         display: none;
     }
 
+    /* Desktop Navigation */
     nav {
         display: flex;
         flex-direction: row;
@@ -19,7 +24,7 @@
         padding: 0.8rem 1rem;
     }
 
-    /* Temple Grid */
+    /* Temple Grid: Two Columns */
     .temple-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
@@ -31,13 +36,20 @@
     }
 }
 
-/* Larger Desktop Screens */
+
+/* ==============================
+   LARGER DESKTOP SCREENS
+   Screens 1024px and above
+================================= */
+
 @media screen and (min-width: 1024px) {
 
+    /* Temple Grid: Three Columns */
     .temple-grid {
         grid-template-columns: repeat(3, 1fr);
     }
 
+    /* Wider Main Content */
     main {
         max-width: 1200px;
     }
