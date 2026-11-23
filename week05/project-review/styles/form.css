@@ -1,0 +1,218 @@
+/* Global CSS variables */
+:root {
+    --primary-color: #14532D;
+    --accent-color: #D4A017;
+    --background-color: #FFFDF5;
+    --text-color: #222222;
+    --white-color: #FFFFFF;
+    --light-green: #E8F1E9;
+}
+
+/* General styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: 1.5rem;
+    border-bottom: 5px solid var(--accent-color);
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+}
+
+/* Main content */
+main {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+}
+
+/* Form */
+form {
+    background-color: var(--white-color);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+}
+
+label,
+legend {
+    font-weight: 600;
+}
+
+form>label {
+    display: block;
+    margin-top: 1rem;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 0.4rem;
+    border: 1px solid #999999;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Fieldsets */
+fieldset {
+    border: 1px solid var(--accent-color);
+    border-radius: 7px;
+    padding: 1rem;
+    margin-top: 1.5rem;
+}
+
+legend {
+    color: var(--primary-color);
+    padding: 0 0.4rem;
+}
+
+fieldset label {
+    display: block;
+    margin: 0.5rem 0;
+}
+
+.hint,
+.optional {
+    font-size: 0.85rem;
+    color: #555555;
+}
+
+.optional {
+    font-weight: 400;
+}
+
+/* Rating */
+.rating-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.rating-options label {
+    color: var(--accent-color);
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.rating-options input {
+    accent-color: var(--primary-color);
+}
+
+/* Checkboxes */
+input[type="checkbox"],
+input[type="radio"] {
+    accent-color: var(--primary-color);
+    margin-right: 0.4rem;
+}
+
+/* Submit button */
+input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0B3B20;
+}
+
+/* Keyboard focus */
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border-top: 5px solid var(--accent-color);
+    font-size: 0.9rem;
+}
+
+/* Desktop view */
+@media screen and (min-width: 700px) {
+    main {
+        padding: 2rem;
+    }
+
+    form {
+        padding: 2rem;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+}
+
+/* Confirmation page */
+.confirmation {
+    background-color: var(--white-color);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+}
+
+.confirmation h2,
+.confirmation h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.confirmation p {
+    margin-bottom: 1rem;
+}
+
+.back-link {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 0.8rem 1.2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 1rem;
+}
+
+.back-link:hover {
+    background-color: #0B3B20;
+}
